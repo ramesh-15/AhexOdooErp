@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+<record id="New_fee_tree_view" model="ir.ui.view">
+            <field name="name">school.student.tree</field>
+            <field name="model">school.student</field>
+            <field name="arch" type="xml">
+                <tree string="fee"  >
+
+                   <field name="name" />
+                   <field name="rollid"  />
+                   <field name="course"/>
+                   <field name="payment"/>
+                   <field name="due_fee"/>
+                    <field name="fee"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+<!--        action-->
+      <record id="new_studentfee" model="ir.actions.act_window">
+            <field name="name"> fee</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree</field>
+            <field name="res_model">school.student</field>
+        </record>
+
+        <menuitem id="fee"
+                  name="fee"
+                  parent="school_data_conf"
+                  action="new_studentfee"/>
+    </data>
+</odoo>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+    <!-- Form View for school.staff -->
+    <record model="ir.ui.view" id="view_school_staff_form">
+        <field name="name">school.staff.form</field>
+        <field name="model">school.staff</field>
+        <field name="arch" type="xml">
+            <form string="Student Form">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="professional"/>
+                        <field name="experience"/>
+                        <field name="subject"/>
+                        <field name="age"/>
+                        <field name="gender"/>
+                        <field name="email"/>
+                        <field name="image"/>
+                    </group>
+                    <group>
+
+
+                        <field name="join_date"/>
+                        <field name="date_of_birth"/>
+                        <field name="salary"/>
+                        <field name="address"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--New Staff Tree View-->
+
+        <record id="New_Staff_tree_view" model="ir.ui.view">
+            <field name="name">school.staff.tree</field>
+            <field name="model">school.staff</field>
+            <field name="arch" type="xml">
+                <tree string="New Staff" decoration-danger="age &lt;= 50" decoration-success="age &gt; 50"
+                      default_order="name desc">
+
+                    <field name="name" class="oe_center"/>
+                    <field name="professional"/>
+                    <field name="experience"/>
+                    <field name="subject"/>
+                    <field name="email"/>
+                    <field name="salary"/>
+                    <field name="gender"/>
+                    <field name="age"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--kanban view for staff-->
+        <record model="ir.ui.view" id="view_school_staff_kanban">
+            <field name="name">school.staff.kanban</field>
+            <field name="model">school.staff</field>
+            <field name="arch" type="xml">
+                <kanban class="oe_background_grey">
+                    <field name="name"/>
+                    <field name="professional"/>
+                    <field name="experience"/>
+                    <field name="subject"/>
+                    <field name="age"/>
+                    <field name="address"/>
+                    <!--                    <field name="track_id"/>-->
+                    <!-- Add more fields as needed -->
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div class="oe_kanban_card">
+                                    <!-- Display the student's name -->
+                                    <div class="oe_kanban_title">
+                                        <field name="name"/>
+                                    </div>
+                                    <!-- Display the student's course -->
+                                    <div class="oe_kanban_course">
+                                        <field name="professional"/><br/>
+                                        <field name="experience"/>
+                                        years of Ex. <br/>
+                                    </div>
+
+
+                                    <!-- Display the student's age and gender -->
+                                    <div class="oe_kanban_content">
+                                        <field name="address"/>
+                                        <br/>
+                                        <field name="gender"/>
+                                    </div>
+
+
+                                    <!-- You can add more fields and customize the layout as needed -->
+
+                                    <!-- Example: Display the student's image -->
+                                    <div class="oe_kanban_image">
+                                        <field name="image" widget="image"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+
+                </kanban>
+            </field>
+        </record>
+
+        <!--    action-->
+
+        <record id="new_staff" model="ir.actions.act_window">
+            <field name="name">New Staff</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="res_model">school.staff</field>
+        </record>
+
+        <menuitem id="school_new_staff"
+                  name="New Staff"
+                  parent="school_data_staff"
+                  action="new_staff"/>
+    </data>
+</odoo>

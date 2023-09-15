@@ -1,0 +1,19 @@
+/* Style the New Employee menu item */
+#ahex_employee_new_emp {
+    font-weight: bold;
+    color: #FFA500; /* Change the color to orange */
+}
+
+/* Style the Contract Employee menu item */
+#ahex_employee_new_contr {
+    font-weight: bold;
+    color: #008000; /* Change the color to green */
+}
+
+/* Style the Freelancer Employee menu item */
+#ahex_employee_new_freelancer {
+    font-weight: bold;
+    color: #0000FF; /* Change the color to blue */
+}
+.emp{background-color: red;
+font-size: larger;}

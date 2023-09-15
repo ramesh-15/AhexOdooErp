@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem id="attendance" name="Ahex Attendance"/>
+        <menuitem id="attendance_menu" parent="attendance" name=" New Attendance"/>
+    </data>
+</odoo>
+

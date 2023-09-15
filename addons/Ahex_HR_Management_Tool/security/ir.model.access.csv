@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+Ahex_HR_Management_Tool.access_ahex_employee,access_ahex_employee,Ahex_HR_Management_Tool.model_ahex_employee,base.group_user,1,1,1,1
+
+
+Ahex_HR_Management_Tool.access_ahex_department,access_ahex_department,Ahex_HR_Management_Tool.model_ahex_department,base.group_user,1,1,1,1
+Ahex_HR_Management_Tool.access_ahex_freelanceremployee,access_ahex_freelanceremployee,Ahex_HR_Management_Tool.model_ahex_freelanceremployee,base.group_user,1,1,1,1
+Ahex_HR_Management_Tool.access_ahex_contractemployee,access_ahex_contractemployee,Ahex_HR_Management_Tool.model_ahex_contractemployee,base.group_user,1,1,1,1

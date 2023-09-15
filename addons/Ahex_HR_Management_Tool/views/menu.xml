@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id = "ahex_employee_root"
+              name ="Ahex Employee"
+              sequence = "10"/>
+
+    <menuitem id = "ahex_employee_emp"
+              name ="Employees"
+              parent="ahex_employee_root"
+              sequence = "10"/>
+
+
+
+
+ <!-- Menu for Department -->
+
+</odoo>

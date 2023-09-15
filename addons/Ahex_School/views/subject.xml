@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+
+
+<!--        action-->
+        <record id="new_subject" model="ir.actions.act_window">
+            <field name="name"> Subject</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="res_model">school.subject</field>
+        </record>
+
+        <menuitem id="school_subject"
+                  name="Subject"
+                  parent="school_data_conf"
+                  action="new_subject"/>
+    </data>
+</odoo>

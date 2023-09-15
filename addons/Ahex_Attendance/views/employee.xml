@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+
+
+<!--        action-->
+        <record id="new_attendance" model="ir.actions.act_window">
+            <field name="name"> Attendance</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="res_model">attendance.employee</field>
+        </record>
+
+        <menuitem id="attendance_employee"
+                  name="Attendance"
+                  parent="attendance_menu"
+                  action="new_attendance"/>
+    </data>
+</odoo>

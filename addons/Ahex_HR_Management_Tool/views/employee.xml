@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--New Employee-->
+    <data>
+<!--        <template id="assets_custom_module_css" name="custom_module_styles.css">-->
+<!--            <link rel="stylesheet" type="text/css" href="/Ahex_HR_management_Tool/static/css/custom_module_styles.css"/>-->
+<!--        </template>-->
+        <record id="New_emp_tree_view" model="ir.ui.view">
+            <field name="name">ahex.employee.tree</field>
+            <field name="model">ahex.employee</field>
+            <field name="arch" type="xml">
+                <tree string="New Employee"  decoration-danger="age &lt;= 20" decoration-success="age &gt; 20" default_order="name desc">
+                    <field name="name"/>
+                    <field name="address"/>
+                    <field name="gender"/>
+                    <field name="age"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_ahex_employee" model="ir.actions.act_window">
+            <field name="name" >New Employee</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="res_model">ahex.employee</field>
+        </record>
+
+        <menuitem id="ahex_employee_new_emp"
+                  name="New Employee"
+                  parent="ahex_employee_emp"
+                  action="action_ahex_employee"
+                  sequence="10"/>
+
+        <record id="ahex_employee_new_emp_view_kanban" model="ir.actions.act_window.view">
+            <field name="sequence" eval="0"/>
+            <field name="view_mode">kanban</field>
+        </record>
+
+
+
+        <!-- Contract Employee -->
+        <record id="action_ahex_contractemployee" model="ir.actions.act_window">
+            <field name="name">Contract Employee</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+            <field name="res_model">ahex.contractemployee</field>
+        </record>
+
+        <menuitem id="ahex_employee_new_contr"
+                  name="Contract Employee"
+                  parent="ahex_employee_emp"
+                  action="action_ahex_contractemployee"
+                  sequence="11"/>
+
+        <!-- Freelancer -->
+        <record id="action_ahex_freelancer_employee" model="ir.actions.act_window">
+            <field name="name">Freelancer Employee</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,form</field>
+            <field name="res_model">ahex.freelanceremployee</field>
+        </record>
+
+        <menuitem id="ahex_employee_new_freelancer"
+                  name="Freelancer Employee"
+                  parent="ahex_employee_emp"
+                  action="action_ahex_freelancer_employee"
+                  sequence="12"/>
+    </data>
+
+</odoo>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+
+
+<!--        action-->
+        <record id="new_syllabus" model="ir.actions.act_window">
+            <field name="name"> Syllabus</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="res_model">school.syllabus</field>
+        </record>
+
+        <menuitem id="school_syllabus"
+                  name="syllabus"
+                  parent="school_data_conf"
+                  action="new_syllabus"/>
+    </data>
+</odoo>

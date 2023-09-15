@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--New Employee-->
+
+
+
+
+    <record id="action_ahex_department" model="ir.actions.act_window">
+        <field name="name">Department</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="res_model">ahex.department</field>
+    </record>
+
+     <menuitem id = "ahex_department"
+              name ="Department"
+              parent ="ahex_employee_root"
+               action="action_ahex_department"
+              sequence = "13"/>
+</odoo>
